@@ -31,7 +31,7 @@
 				`	"No."`
 					decline
 			notReady
-			`	"Sure, go do that. But don't tell anyone what we told you!"`
+			`	"	Sure, go do that. But don't tell anyone what we told you!"`
 				defer
 	npc accompany save
 		government Merchant
@@ -53,6 +53,7 @@
 			`[Great job, Captain <last>! Instead of paying you in credits, how about you come back later and we'll give you a free suit of your own Powered Armor?]`
 			branch hai
 				has "First Contact: Hai: offered"
+			done
 			label hai
 			`	[You notice that those bounty hunters were using Hai outfits.]`
 
@@ -94,46 +95,46 @@ mission "Missive from Harmony 2"
 	on offer
 		conversation
 			`After arriving on Harmony, you head to Brother Greg's monestary. You look for him, but to no avail. As you give up and begin heading out of the monestary, one of the other monks says "Hey, Captain <last>, wait up a second."`
-			`You stop and turn around. The monk says "Here, I think you dropped this," as he hands you a folded scrap of paper. "Looks like a note. Seemed important.`
+			`	You stop and turn around. The monk says "Here, I think you dropped this," as he hands you a folded scrap of paper. "Looks like a note. Seemed important.`
 			choice
-				`"Is this your note?"`
+				`	"Is this your note?"`
 					goto denial
-				`"Thanks. I'll try to keep better track of my stuff."`
+				`	"Thanks. I'll try to keep better track of my stuff."`
 					goto thanks
 			label denial
-			`"My note? No, that's yours. You definitely had it when you came here. I saw it fall out of your pocket."`
+			`	"My note? No, that's yours. You definitely had it when you came here. I saw it fall out of your pocket."`
 				goto note
 			label thanks
-			`"No problem. Thanks for stopping by."`
+			`	"No problem. Thanks for stopping by."`
 				goto note
 			label note
-			`The monk then casually walks off.`
-			`You head back to your ship, find someplace private, and unfold the note.`
+			`	The monk then casually walks off.`
+			`	You head back to your ship, find someplace private, and unfold the note.`
 			`	Meet Brother Greg in the mountain cave with a cross carved into the side of the cave mouth.`
 			`Do you do as the note says?`
 			choice
-				`Yes, go to the cave.`
+				`	(Yes, go to the cave.)`
 					goto cave
-				`No, I don't like all this secrecy. It's too fishy.`
+				`	(No, I don't like all this secrecy. It's too fishy.)`
 					decline
 			label cave
-			`You take a flashlight and head to the mountain caves, periodically making sure you're not being followed. It's a good thing you brought the flashlight, because it takes you until dark to find the right cave.`
+			`	You take a flashlight and head to the mountain caves, periodically making sure you're not being followed. It's a good thing you brought the flashlight, because it takes you until dark to find the right cave.`
 			choice
-				`(Go inside. If it was a trap, the ship would be better hidden.)`
+				`	(Go inside. If it was a trap, the ship would be better hidden.)`
 					goto inside
-				`(Okay, now I'm out. No way I'm stupid enough for a trap this obvious.)`
+				`	(Okay, now I'm out. No way I'm stupid enough for a trap this obvious.)`
 					decline.
 			label inside
-			`You walk inside, your gun at the ready (just in case). After going quite deep underground, you finally see a light. Getting closer, you find Brother Greg sitting on one of two logs, a campfire between them. Sitting next to Brother Greg is some scruffy teenaged girl who, by all visual cues, is most likely a pirate, or at the least, a recently reformed pirate. You can't really tell which, but you can tell that she has a fairly well-concealed firearm.`
-			`"Ah, <first>, you've finally arrived. Please take a seat," says Brother Greg.`
-			`You cautiously sit down, keeping your gun ready.`
-			`"I suppose you're wondering what's been going on," Brother Greg said.`
+			`	You walk inside, your gun at the ready (just in case). After going quite deep underground, you finally see a light. Getting closer, you find Brother Greg sitting on one of two logs, a campfire between them. Sitting next to Brother Greg is some scruffy teenaged girl who, by all visual cues, is most likely a pirate, or at the least, a recently reformed pirate. You can't really tell which, but you can tell that she has a fairly well-concealed firearm.`
+			`	"Ah, <first>, you've finally arrived. Please take a seat," says Brother Greg.`
+			`	You cautiously sit down, keeping your gun ready.`
+			`	"I suppose you're wondering what's been going on," Brother Greg said.`
 			choice
-				`"Yes, I am. What's with all this cloak and dagger?"`
+				`	"Yes, I am. What's with all this cloak and dagger?"`
 					goto secrecy
 			label secrecy
-			`"Well, hm... Arianne, do you wish to explain it, or shall I?" Brother Greg asks the pirate girl.`
-			`"You only step in if the talkin' goes south. That was the deal," Arianne responds. She then turns to you and says "I's a pirate from Stormhold. One of the higher-ups, Owen Diedrich, sent me ta Harmony, givin' me jus' enough credits ta get here, ta beg the monks here ta contact ya'."`
+			`	"Well, hm... Arianne, do you wish to explain it, or shall I?" Brother Greg asks the pirate girl.`
+			`	"You only step in if the talkin' goes south. That was the deal," Arianne responds. She then turns to you and says "I's a pirate from Stormhold. One of the higher-ups, Owen Diedrich, sent me ta Harmony, givin' me jus' enough credits ta get here, ta beg the monks here ta contact ya'."`
 			branch reconcile
 				has "event: fw armistice"
 			choice
@@ -182,8 +183,8 @@ mission "Explore Acallaris"
 	on complete
 		conversation
 			`[pc lands near an antfolk hive]`
-			`[antfolk speak antfolk to pc and arianne]`
-			`[pc and arianne return to ship]`
+			`	[antfolk speak antfolk to pc and arianne]`
+			`	[pc and arianne return to ship]`
 
 mission "Antfolk First Contact 0"
 	invisible
@@ -234,8 +235,8 @@ mission "Antfolk First Contact 1"
 	on complete
 		conversation
 			`[pc convinces Rek to come along]`
-			`[pc suggests to Rek that Rek stay hidden on the ship during the trip through human space; Rek agrees]`
-			`"I need to inform some of the Korath and other Wanderers about where I'm going. I'll meet you in the spaceport," says Rek.`
+			`	[pc suggests to Rek that Rek stay hidden on the ship during the trip through human space; Rek agrees]`
+			`	"I need to inform some of the Korath and other Wanderers about where I'm going. I'll meet you in the spaceport," says Rek.`
 
 mission "Antfolk First Contact 2"
 	name "First Contact: Antfolk"
@@ -248,13 +249,13 @@ mission "Antfolk First Contact 2"
 		passengers 2
 		conversation
 			`[Rek suggests pc obtain a Lincos Dictionary for English {and explains what a Lincos Dictionary is}]`
-			`[pc decides to contact Freya]`
+			`	[pc decides to contact Freya]`
 	on complete
 		conversation
 			`[pc explains antfolk to freya]`
-			`[freya suggests talking to the scientists of the Republic's SETI Program, headquartered on Earth]`
-			`[freya [begs, demands] to come]`
-			`"I need to pack some equipment and inform some of the other engineers here. Let's meet up in the spaceport bar in, say, two hours, I think," says Freya.`
+			`	[freya suggests talking to the scientists of the Republic's SETI Program, headquartered on Earth]`
+			`	[freya [begs, demands] to come]`
+			`	"I need to pack some equipment and inform some of the other engineers here. Let's meet up in the spaceport bar in, say, two hours, I think," says Freya.`
 
 mission "Antfolk First Contact 3"
 	name "First Contact: Antfolk"
@@ -302,10 +303,10 @@ mission "Antfolk Hyperdrives Prep 1"
 	on offer
 		conversation
 			`It occurs to you that you know very little about how Hyperdrives work or how to make them, and even less about Jump Drives. Not to mention that what little you know of the two makes just giving tons of either one to a race that hasn't earned the knowledge for themselves sounds like more of a terrible idea the more you think about it.`
-			`You decide to ask Steve her opinion.`
-			`[Steve teaches PC about simplified models and giving tech slowly and incrementally]`
-			`"So I should give the Antfolk simplified, educational models of Hyperdrives rather than actual Hyperdrives, and *only* give them models for Hyperdrives, nothing else, at least for now," you say, summarizing and clarifying what [the Pug] said. Then you ask, "But... where am I supposed to find something like that? And how many do I need?"`
-			`Steve smirks. At least, you think she's smirking. "Telling you all of that would defeat the point of you doing this instead of us. If you *must* have a hint, then I'd recommend contacting one of your species' 'corporations' that manufactures Hyperdrives and see if any of them can - or will - help you. As for how many you need, only the Antfolk scientists looking at such a model *may* be able to know how many they need in advance."`
+			`	You decide to ask Steve her opinion.`
+			`	[Steve teaches PC about simplified models and giving tech slowly and incrementally]`
+			`	"So I should give the Antfolk simplified, educational models of Hyperdrives rather than actual Hyperdrives, and *only* give them models for Hyperdrives, nothing else, at least for now," you say, summarizing and clarifying what [the Pug] said. Then you ask, "But... where am I supposed to find something like that? And how many do I need?"`
+			`	Steve smirks. At least, you think she's smirking. "Telling you all of that would defeat the point of you doing this instead of us. If you *must* have a hint, then I'd recommend contacting one of your species' 'corporations' that manufactures Hyperdrives and see if any of them can - or will - help you. As for how many you need, only the Antfolk scientists looking at such a model *may* be able to know how many they need in advance."`
 
 mission "Antfolk Hyperdrives Prep 2"
 	landing
@@ -315,14 +316,15 @@ mission "Antfolk Hyperdrives Prep 2"
 		has "Antfolk Hyperdrives Prep 1: done"
 	on offer
 		conversation
-			`You pull up a list of all major human ship and outfit manufacturing corporations from your ship's computer database.`
+			`You pull up a list of all major human ship and outfit manufacturing corporations from your ship's computer database...`
 			`	Lovelace Labs, Headquarters on Planet Ada`
 			`	Deep Sky, Headquarters on Planet Asgard`
 			`	Kraz Cybernetics, Headquarters on Planet Rust`
 			`	The Delta V Corporation, Headquarters on Planet Solace`
 			`	The Syndicate, Headquarters on Planet Hephaestus`
 			`	Tarazed Corporation, Headquarters on Planet Wayfarer`
-			`You pull up more details on one of the listed corporations.`
+			``
+			`	You pull up more details on one of the listed corporations.`
 				goto list
 			label list
 			choice
@@ -341,38 +343,36 @@ mission "Antfolk Hyperdrives Prep 2"
 				`	(Stop researching)`
 					goto stop
 			label lovelace
-				`[placeholder]`
-					goto list
+			`[placeholder]`
+				goto list
 			label deepsky
-				`[placeholder]`
-					goto list
+			`[placeholder]`
+				goto list
 			label kraz
-				`[placeholder]`
-					goto list
+			`[placeholder]`
+				goto list
 			label deltav
-				`[placeholder]`
-					goto list
+			`[placeholder]`
+				goto list
 			label syndicate
-				`[placeholder] [The Syndicate have resources, but they are jerks]`
-				`(You also recall that Owen Diedrich didn't trust the Syndicate to know anything about this, so you'll need to carefully withhold from them as much information as you can about why you're coming to them.)`
-					goto list
+			`[placeholder] [The Syndicate have resources, but they are jerks]`
+			`(You also recall that Owen Diedrich didn't trust the Syndicate to know anything about this, so you'll need to carefully withhold from them as much information as you can about why you're coming to them.)`
+				goto list
 			label tarazed #not sure how solid the coding nested here is. Another thing to test, I suppose.
-				`[placeholder]`
-					goto return
-				branch kestrel
-					has "kestrel available"
-				label kestrel
-				`(You also recall that the Tarazed Corporation seems to like you, seeing as they sought you out to test their new model of warship, the Kestrel.)`
-					goto return
-				label return
-					goto list
+			`[placeholder]`
+				goto return
+			branch kestrel
+				has "kestrel available"
+			label kestrel
+			`(You also recall that the Tarazed Corporation seems to like you, seeing as they sought you out to test their new model of warship, the Kestrel.)`
+				goto return
+			label return
+				goto list
 			label stop
 			`	You feel like you've read enough to have some idea of how to ask each group for help.`
+				accept
 	to complete
-		stopover Wayfarer
-			dialog
-				
-					done #how does this even work??
+		1 == 1 #it will complete as soon as you accept it
 
 mission "Antfolk Hyperdrives Prep 3a"
 	#lovelace
@@ -382,6 +382,8 @@ mission "Antfolk Hyperdrives Prep 3a"
 	destination Ada
 	to offer
 		has "Antfolk Hyperdrives Prep 2: done"
+	to fail
+		has "Antfolk Hyperdrives Prep 3f: done" #so the PC doesn't accidentally ask about hyperdrives 12 years later and/or to remove the missions from your mission roster because you don't need to find any more educational hyperdrives
 	on complete
 		conversation
 			`"Sorry, Lovelace Labs can't help you."`
@@ -395,6 +397,8 @@ mission "Antfolk Hyperdrives Prep 3b"
 	destination Asgard
 	to offer
 		has "Antfolk Hyperdrives Prep 2: done"
+	to fail
+		has "Antfolk Hyperdrives Prep 3f: done"
 	on complete
 		conversation
 			`"Sorry, Deep Sky can't help you."`
@@ -407,6 +411,8 @@ mission "Antfolk Hyperdrives Prep 3c"
 	destination Rust
 	to offer
 		has "Antfolk Hyperdrives Prep 2: done"
+	to fail
+		has "Antfolk Hyperdrives Prep 3f: done"
 	on complete
 		conversation
 			`"Sorry, Kraz Cybernetics can't help you."`
@@ -419,6 +425,8 @@ mission "Antfolk Hyperdrives Prep 3d"
 	destination Solace
 	to offer
 		has "Antfolk Hyperdrives Prep 2: done"
+	to fail
+		has "Antfolk Hyperdrives Prep 3f: done"
 	on complete
 		conversation
 			`"Sorry, the Delta V Corporation can't help you."`
@@ -431,6 +439,8 @@ mission "Antfolk Hyperdrives Prep 3e"
 	destination Hephaestus
 	to offer
 		has "Antfolk Hyperdrives Prep 2: done"
+	to fail
+		has "Antfolk Hyperdrives Prep 3f: done"
 	on complete
 		conversation
 			choice
@@ -463,30 +473,35 @@ mission "Antfolk Hyperdrive Model 1"
 	to offer
 		has "Antfolk Hyperdrives Prep 3f: completed"
 	source "Wayfarer"
-	cargo "Hyperdrive Educational Model" 20
+	cargo "Hyperdrive Educational Model" 15 #educational model, perhaps it's missing some heavy functional pieces etcetera?
 	on offer
 		dialog "Some Tarazed Corp workers load the Hyperdrive Educational Model onto your ship."
 	destination "[Orb of Origin]"
 	on complete
 		conversation
 			`The Antfolk unload the simplified model of a Hyperdrive from your ship and carry it off. You try asking them how many more they think they'll need, but they just look at you and then walk away, carrying the model.`
-			`You go back to your ship and try contacting the Antfolk government. You manage to get a response from a politician hive mind of Antfolk calling themselves "[[Ambassador/Ambassadors]/[Ambassador/Ambassadors]s] [named antfolk sapience 1]" who says "This 'Hyperdrive' you gave us does not [appear/seem] [real/authentic]. It does not [work/function]. What is the meaning of this?"`
-			`"I gave you a simplified educational model of a Hyperdrive," you say.`
-			`"Why? What is your [purpose/reasoning] for doing so?" [Ambassador/Ambassadors] [named antfolk sapience 1] asks.
+			`	You go back to your ship and try contacting the Antfolk government. You manage to get a response from a politician hive mind of Antfolk calling themselves "[[Ambassador/Ambassadors]/[Ambassador/Ambassadors]s] [named antfolk sapience 1]" who says "This 'Hyperdrive' you gave us does not [appear/seem] [real/authentic]. It does not [work/function]. What is the meaning of this?"`
+			`	"I gave you a simplified educational model of a Hyperdrive," you say.`
+			`	"Why? What is your [purpose/reasoning] for doing so?" [Ambassador/Ambassadors] [named antfolk sapience 1] asks.
 			choice
-				`"Because real Hyperdrives are dangerous and I wished for you to have something safer to reverse-engineer."`
+				`	"Because real Hyperdrives are dangerous and I wished for you to have something safer to reverse-engineer."`
 					goto safer
-				#`"Because real Hyperdrives are extremely complicated and I wished for you to have something easier to reverse-engineer."`
+				#`	"Because real Hyperdrives are extremely complicated and I wished for you to have something easier to reverse-engineer."`
 					#goto easier
 			label safer
-				`"How are Hyperdrives dangerous? Are they not [simply/just/only] a [device/tool] of [propulsion/movement]?" [Ambassador/Ambassadors] [named antfolk sapience 1] asks.`
-				`"They are meant purely for faster-than-light propulsion, but they do so partly by using a nuclear fusion reaction intense enough to destroy an entire city. Not something you want to turn on while in a terrestrial laboratory," you explain.`
-				`"[I/we/this one]... understand. We are [appreciative/thankful] of your [thoughtfulness/prudence] on the matter," [Ambassador/Ambassadors] [named antfolk sapience 1] says slowly.`
-				`You think you might've also detected a hint of embarassment or nervousness in [Ambassador/Ambassadors] [named antfolk sapience 1]'s voice. You suspect that they had attempted exactly what you said was a bad idea prior to your call.`
-			`"How many more of these Hyperdrive models do you think you'll need?" you ask.`
-			`"We will definitely need at least one more. Beyond that, [I/we/this one] cannot be sure."`
+			`	"How are Hyperdrives dangerous? Are they not [simply/just/only] a [device/tool] of [propulsion/movement]?" [Ambassador/Ambassadors] [named antfolk sapience 1] asks.`
+			`	"They are meant purely for faster-than-light propulsion, but they do so partly by using a nuclear fusion reaction intense enough to destroy an entire city. Not something you want to turn on while in a terrestrial laboratory," you explain.`
+			`	"[I/we/this one]... understand. We are [appreciative/thankful] of your [thoughtfulness/prudence] on the matter," [Ambassador/Ambassadors] [named antfolk sapience 1] says slowly.`
+			`	You think you might've also detected a hint of embarassment or nervousness in [Ambassador/Ambassadors] [named antfolk sapience 1]'s voice. You suspect that they had attempted exactly what you said was a bad idea prior to your call.`
+			`	"How many more of these Hyperdrive models do you think you'll need?" you ask.`
+			`	"We will definitely need at least one more. Beyond that, [I/we/this one] cannot be sure."`
+				goto end
+			label easier
+			`	[placeholder, "you use things more complex than this???"]`
+			label end
 		"reputation: Antfolk Union" >?= 20
 		"reputation: Antfolk Merchant" >?= 20
+			
 
 mission "Antfolk Hyperdrive Model 2"
 	landing
@@ -507,11 +522,11 @@ mission "Antfolk Hyperdrive Model 2A"
 		has "Antfolk Hyperdrive Model 2: done"
 	source "Wayfarer"
 	destination "[Orb of Origin]"
-	cargo "Hyperdrive Educational Model" 20
+	cargo "Hyperdrive Educational Model" 15
 	on complete
 		conversation
 			`The Antfolk unload their second simplified Hyperdrive model from your ship. You decide to contact [Ambassador/Ambassadors] [named antfolk sapience 1] to see if they need more.`
-			`By way of radio communication, [Ambassador/Ambassadors] [named antfolk sapience 1] says "Yes, we will need a third. [I/we/this one] must apologize for being unable to provide a total number required. Studying these models is not an exact [science/art], but we will know when we have enough."`
+			`	By way of radio communication, [Ambassador/Ambassadors] [named antfolk sapience 1] says "Yes, we will need a third. [I/we/this one] must apologize for being unable to provide a total number required. Studying these models is not an exact [science/art], but we will know when we have enough."`
 
 mission "Antfolk Hyperdrive Model 3"
 	landing
@@ -532,7 +547,7 @@ mission "Antfolk Hyperdrive Model 3A"
 		has "Antfolk Hyperdrive Model 3: done"
 	source "Wayfarer"
 	destination "[Orb of Origin]"
-	cargo "Hyperdrive Educational Model" 20
+	cargo "Hyperdrive Educational Model" 15
 	on complete
 		conversation
 			`"This is enough of them. On behalf of the High Queen, [I/we/this one] thank you," says [Ambassador/Ambassadors] [named antfolk sapience 1]`
@@ -553,24 +568,24 @@ mission "Message from the Pug"
 	on offer
 		conversation
 			`You recieve a heavily encrypted transmission that turns out to be from the Pug.`
-			`"Attention Captain <name>. The 'winds of change', as your species says, have begun blowing in Antfolk space since you delivered those Hyperdrive models. It would be in your interests to return to the Antfolk homeworld and see for yourself. But first, please stop by Altilt San Pug and pick up 'Steve'."`
+			`	"Attention Captain <name>. The 'winds of change', as your species says, have begun blowing in Antfolk space since you delivered those Hyperdrive models. It would be in your interests to return to the Antfolk homeworld and see for yourself. But first, please stop by Altilt San Pug and pick up 'Steve'."`
 	to complete
 		stopover "Altilt San Pug"
 	on complete
 		conversation
 			`When you exit your ship, you find that the Antfolk have already sent [Ambassador/Ambassadors] [named antfolk sapience 1], along with a good twenty more Antfolk (you can't tell how many actual sapiences there are among them, though), about five of which are wearing battle armor and are carrying some kind of gas grenade.`
-			`"Honored Human <first> Captain <name>! It has been a while! Come, come. We will prepare for you a [banquet/feast] fit for a [deity/spirit]!" says [Ambassador/Ambassadors] [named antfolk sapience 1].`
-			`You start to walk off with the Antfolk before [Ambassador/Ambassadors] [named antfolk sapience 1] stop and turn around. They then say "It has occured to [I/we/this one] that not even the greatest chef in the Antfolk Union could guarente a correct guess at what you would find [appitizing/edible]. Would you mind informing [I/we/this one] of Human dietary habits?"`
+			`	"Honored Human <first> Captain <name>! It has been a while! Come, come. We will prepare for you a [banquet/feast] fit for a [deity/spirit]!" says [Ambassador/Ambassadors] [named antfolk sapience 1].`
+			`	You start to walk off with the Antfolk before [Ambassador/Ambassadors] [named antfolk sapience 1] stop and turn around. They then say "It has occured to [I/we/this one] that not even the greatest chef in the Antfolk Union could guarantee a correct guess at what you would find [appitizing/edible]. Would you mind informing [I/we/this one] of Human dietary habits?"`
 			choice
-				`(I explain as best I can what sort of things humans normally eat.)`
+				`	(I explain as best I can what sort of things humans normally eat.)`
 					goto humanfood
 			label humanfood
-				`[Ambassador/Ambassadors] [named antfolk sapience 1] think for a while, then say "[I/we/this one] does not know if we can produce food to such... specific specifications. Perhaps we should skip the feast for now. [I/we/this one] shall inform those who need to know so that we can dine next time."`
-				`Considering you didn't even go into your own personal preferences of what examples you gave that you did or didn't actually like, you shudder at the thought of what the Antfolk were planning on serving you.`
-				`Just to be extra safe, you say "How about I fetch you guys a data chip containing human deitary information from a xenobiological perspective?"`
-				`"That would probably be best," say [Ambassador/Ambassadors] [named antfolk sapience 1].`
+			`	[Ambassador/Ambassadors] [named antfolk sapience 1] think for a while, then say "[I/we/this one] does not know if we can produce food to such... specific specifications. Perhaps we should skip the feast for now. [I/we/this one] shall inform those who need to know so that we can dine next time."`
+			`	Considering you didn't even go into your own personal preferences of what examples you gave that you did or didn't actually like, you shudder at the thought of what the Antfolk were planning on serving you.` #nuuuu, it was going to be literally pure sugar water! Which is very delicious, by the way.
+			`	Just to be extra safe, you say "How about I fetch you guys a data chip containing human deitary information from a xenobiological perspective?"`
+			`	"That would probably be best," say [Ambassador/Ambassadors] [named antfolk sapience 1].`
 				set "human food data chip fetch quest"
-			`"To change the topic," [Ambassador/Ambassadors] [named antfolk sapience 1] say, "Because of your critical role in our development of Hyperdrive technology, the High Queen has decreed that the Antfolk Union will accept your curreny. We will also allow you to purchase our civilian-grade ships and outfits. In addition, the High Queen has decreed that every planet in the Antfolk Union must pay a salary to you in [honor/thankfulness] of your assistance."`
+			`	"To change the topic," [Ambassador/Ambassadors] [named antfolk sapience 1] say, "Because of your critical role in our development of Hyperdrive technology, the High Queen has decreed that the Antfolk Union will accept your curreny. We will also allow you to purchase our civilian-grade ships and outfits. In addition, the High Queen has decreed that every planet in the Antfolk Union must pay a salary to you in [honor/thankfulness] of your assistance."`
 		set "license: Antfolk"
 
 mission "obtain human deitary data chip"
@@ -599,9 +614,9 @@ mission "Book of First Trigger A"
 		conversation
 			`You recall that the Pug wanted you to share all the lessons you've learned from shepharding the Antfolk with the rest of Humankind. Speaking with the Brothers on Harmony about how to do that might be a good place to start. Do you want to go to the Monestary and request an audience with Brother Greg?`
 			choice
-				`Yes, it sounds like a good idea.`
+				`	(Yes, it sounds like a good idea.)`
 					goto yes
-				`No, I'm tired of being the Pug's puppet.`
+				`	(No, I'm tired of being the Pug's puppet.)`
 					decline
 			label yes
 				set "honoring Steve's wishes"
@@ -618,9 +633,9 @@ mission "Book of First Trigger B"
 		conversation
 			`While sitting in the Harmony spaceport bar, you recall that you could probably still go to Brother Greg about what to do with the knowledge you gained from the Pug and Antfolk. Have you changed your mind about not fulfilling Steve's request?`
 			choice
-				`Yes, I've changed my mind. I'll seek Brother Greg's guidance.`
+				`	(Yes, I've changed my mind. I'll seek Brother Greg's guidance.)`
 					goto yes
-				`No, I still refuse to play into the Pug's disproportioned hands.`
+				`	(No, I still refuse to play into the Pug's disproportioned hands.)`
 					defer
 			label yes
 				set "honoring Steve's wishes"
@@ -635,8 +650,8 @@ mission "Book of First 0"
 	on offer
 		conversation
 			`You prepare for your visit with Brother Greg by downloading all of your Captain's Log entires and ship sensor data relevant to the tale you are about to tell, putting all of it on a single data chip.`
-			`You head to the monestary, the data chip hidden securely on your person, and ask to speak with Brother Greg.`
-			`[conversation between PC and Brother Greg]`
+			`	You head to the monestary, the data chip hidden securely on your person, and ask to speak with Brother Greg.`
+			`	[conversation between PC and Brother Greg]`
 			event "Book of First being written" 1
 
 mission "Player gets recognized 1"
@@ -648,7 +663,7 @@ mission "Player gets recognized 1"
 	on offer
 		conversation
 			`[some minor character recognizes PC as a religious figure from the "holy book" called "The Book of <first>"]`
-			`[PC laughs and ignores the minor character, walking off to do their thing]`
+			`	[PC laughs and ignores the minor character, walking off to do their thing]`
 			set "PC met crazy fan 1"
 			set "heard of firstism"
 
@@ -662,11 +677,11 @@ mission "Player gets recognized 2"
 	on offer
 		conversation
 			`[some minor character recognizes PC as a religious figure from the "holy book" called "The Book of <first>"]`
-			`[PC laughs and ignores the minor character, walking off to do their thing]`
+			`	[PC laughs and ignores the minor character, walking off to do their thing]`
 			branch happenedtwice
 				has "PC met crazy fan 1"
 			label happenedtwice
-			`[PC passively comments on this having happened twice. "What're the odds...?" etc.]`
+			`	[PC passively comments on this having happened twice. "What're the odds...?" etc.]`
 			set "PC met crazy fan 2"
 			set "heard of firstism"
 
@@ -693,6 +708,8 @@ mission "Player gets recognized [X2 (placeholder)]"
 	on offer
 		conversation
 			`[some minor character recognizes PC as a religious figure from the "holy book" called "The Book of <first>"]`
+			choice
+				`	"What do the Quarg think of this?" you ask.`
 			branch happyquarg
 				has "reputation: Quarg" >= 400 #somewhat arbitrary number, can (and probably will) be changed
 			branch uncaringquarg
@@ -701,25 +718,13 @@ mission "Player gets recognized [X2 (placeholder)]"
 			branch madquarg
 				has "reputation: Quarg" <= -1
 			label happyquarg
-			choice
-				`"What do the Quarg think of this?" you ask.`
-					goto happyquarg2
-			label happyquarg2
-			`["The Quarg actually approve!"]`
+			`	["The Quarg actually approve!"]`
 				goto end
 			label uncaringquarg
-			choice
-				`"What do the Quarg think of this?" you ask.`
-					goto uncaringquarg2
-			label uncaringquarg2
-			`["The Quarg don't understand, but they're certainly not doing anything to stop it!"]`
+			`	["The Quarg don't understand, but they're certainly not doing anything to stop it!"]`
 				goto end
 			label madquarg
-			choice
-				`"What do the Quarg think of this?" you ask.`
-					goto madquarg2
-			label madquarg2
-			`["The Quarg don't seem happy about it, but who cares? They can't stop what's happening and everyone knows it!]"`
+			`	["The Quarg don't seem happy about it, but who cares? They can't stop what's happening and everyone knows it!]"`
 				goto end
 			label end
 				set "heard of firstism"
@@ -753,13 +758,13 @@ mission "Player gets recognized [X3.1 (placeholder)]"
 				not "Player gets recognized [X2 (placeholder)]: offered"
 				not "Player gets recognized [X3 (placeholder)]: offered"
 			choice
-				`"Yeah, I don't get it at all," you say.`
+				`	"Yeah, I don't get it at all," you say.`
 					goto end
 			label neverheardofit
-			`[A space alien explains a new Human religion to the Human prophet of that religion]`
+			`	[A space alien explains a new Human religion to the Human prophet of that religion]`
 				goto end
 			label end
-				set "heard of firstism"
+			set "heard of firstism"
 
 mission "Player investigates Firstism 1"
 	landing
@@ -773,8 +778,8 @@ mission "Player investigates Firstism 1"
 			`Somehow, somewhere, someone managed to start an entirely new religion based on what you've learned from your experiences dealing with the Pug and the Antfolk. Seeing as you only ever shared that knowledge with Brother Greg, he should have some idea of how this happened. You might want to visit him at his monestary on Harmony, and soon - you are suddenly even more important of a public figure than before, and you don't want to make too many mistakes, of any kind.`
 	on complete
 		conversation
-			`[Brother Greg explains to PC "I didn't do it, it was this other monk who is now expelled from the order"]`
-			`"Last I heard, Eric is still on Harmony, preaching <first>ism at the spaceport bar every Sunday afternoon. If you want to confront him about it, you know where to find him."`
+			`	[Brother Greg explains to PC "I didn't do it, it was this other monk who is now expelled from the order"]`
+			`	"Last I heard, Eric is still on Harmony, preaching <first>ism at the spaceport bar every Sunday afternoon. If you want to confront him about it, you know where to find him."`
 
 mission "Player investigates Firstism 2"
 	invisible
